@@ -1,0 +1,64 @@
+{
+  "purchases": [
+    {
+      "id": 1,
+      "name": "сырок",
+      "quantity": 10,
+      "status": 1
+    },
+    {
+      "id": 2,
+      "name": "творог",
+      "quantity": 1,
+      "status": 1
+    },
+    {
+      "name": "сок яблочный",
+      "quantity": "3",
+      "status": 1,
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "вода 5л",
+      "quantity": 1,
+      "status": 0
+    },
+    {
+      "name": "кошачий корм",
+      "quantity": "15",
+      "status": 0,
+      "id": 5
+    },
+    {
+      "name": "витамины",
+      "quantity": 1,
+      "status": 0,
+      "id": 6
+    },
+    {
+      "name": "йогурт",
+      "quantity": 2,
+      "status": 1,
+      "id": 7
+    },
+    {
+      "name": "апельсин",
+      "quantity": 33,
+      "status": 1,
+      "id": 8
+    },
+    {
+      "name": "Морковь",
+      "quantity": 5,
+      "status": 0,
+      "id": 9
+    },
+    {
+      "name": "Яблоко красное",
+      "quantity": 6,
+      "status": 0,
+      "id": 10
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <form [formGroup]="purchaseForm">
+    <div class="form-group">
+      <label for="purchasename">Наименование покупки</label>
+      <input type="text" class="form-control" id="purchasename" placeholder="Наименование покупки"
+        formControlName="name" />
+    </div>
+    <div class="form-group">
+      <label for="purchasequantity">Количество</label>
+      <input type="number" class="form-control" id="purchasequantity" placeholder="Количество"
+        formControlName="quantity" />
+    </div>
+    <select class="mt-3 mb-3 custom-select" formControlName="status" *ngIf="id != null">
+      <option [ngValue]="MyPurchasesStatus.new">Не куплено</option>
+      <option [ngValue]="MyPurchasesStatus.bought">Куплено</option>
+    </select>
+    <button class="btn btn-primary mr-4" [disabled]="purchaseForm.invalid" (click)="onSave()">
+      Сохранить
+    </button>
+    <button class="btn btn-danger" *ngIf="id != null" (click)="onDelete()">Удалить</button>
+  </form>
+</div>

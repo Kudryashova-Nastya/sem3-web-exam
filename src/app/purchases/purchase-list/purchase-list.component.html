@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Наименование</th>
+        <th scope="col">Количество</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th class="text-right" scope="col">
+          <button class="btn btn-primary" (click)="onAddProduct()">
+            Добавить покупку
+          </button>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let purchase of purchases | sortPurchases | firstNewPurchase"
+        [style.background-color]="(purchase.status == 0) ? 'lightgreen': 'white'">
+        <td>{{ purchase.name }}</td>
+        <td>{{ purchase.quantity }}</td>
+        <td><button class="btn btn-info" (click)="onChangeStatus(purchase.id)">
+            <span *ngIf="purchase.status == 0; else notBought">Куплено</span>
+            <ng-template #notBought>Не куплено</ng-template>
+          </button></td>
+        <td class="text-right">
+          <button class="btn btn-primary" (click)="onLinkProduct(purchase.id)">
+            Редактировать
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

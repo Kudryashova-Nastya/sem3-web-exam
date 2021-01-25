@@ -32,7 +32,7 @@ export class PurchaseEditComponent implements OnInit {
   ngOnInit(): void {
     this.purchaseForm = new FormGroup({
       name: new FormControl(null, [Validators.required]),
-      quantity: new FormControl(null, [Validators.required]),
+      quantity: new FormControl(null, [Validators.required, Validators.min(1)]),
       status: new FormControl(0, [Validators.required])
     });
     this.getData();

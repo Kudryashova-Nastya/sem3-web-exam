@@ -44,22 +44,13 @@ export class PurchaseListComponent implements OnInit {
     this.router.navigate([this.router.url, 'product']);
   }
 
-  async onDelete(id: number) {
-    try {
-      await this.HttpPurchasesService.deleteOneById(id);
-    } catch (err) {
-      console.error(err);
-    }
-    this.getData();
-  }
-
   async onChangeStatus(id: number) {
     try {
       let data = await this.HttpPurchasesService.getOneById(id);
       if (data.status === 0) {
         data.status = 1
       } else data.status = 0
-      
+
       await this.HttpPurchasesService.putOneById(id, data);
     } catch (err) {
       console.error(err);
